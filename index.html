@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sneha 💌</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe6e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 340px;
+            width: 100%;
+        }
+        h2 {
+            color: #ff4d6d;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        p {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.6;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(255,77,109,0.3);
+            font-weight: bold;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2 id="step-title">Step 1/11 🥺</h2>
+    <p id="step-text">Mujhe nahi malum baccha meri galti kya hai per tujhe kis baat se hurt hua nahi malum lekin dil se sorry baccha meri laddu meri sweeta maan ja na laddu aur maaf kar dena mujhe yaar baccha hu na nahi reh paunga tera bin meri churail beti meri saitan ❤️</p>
+    <button onclick="nextStep()">Tap to Continue 💌</button>
+</div>
+
+<script>
+    const steps = [
+        "Mujhe nahi malum baccha meri galti kya hai per tujhe kis baat se hurt hua nahi malum lekin dil se sorry baccha meri laddu meri sweeta maan ja na laddu aur maaf kar dena mujhe yaar baccha hu na nahi reh paunga tera bin meri churail beti meri saitan ❤️",
+        "Pata hai mujhe ki tum mujhse naraz ho, par ye khamoshi mujhe andar se tod rahi hai... 💔",
+        "Tumhari smile ke bina mera pura din be-rang sa lagta hai. Ek baar muskura do na? 😊",
+        "Sazaa jo deni hai de lo, par aise muh mat modo yaarr... 😞",
+        "Aap meri kuchu puchu ho, meri jaan ho... aapke bina main kisse ladunga? 💖",
+        "Itna gussa accha nahi hota jaan, thoda sa pighal bhi jao mere liye! 🥺❤️",
+        "Maaf kar do na Sneha, agli baar se pakka aapki pasand ki saari baatein manunga! ✨",
+        "Tumhari ek choti si haan mera pura mood sahi kar sakti hai, please ek baar bol do na! 💭",
+        "Choti-choti baaton par ruthna chodo, hum dono saath me hi sabse acche lagte hain! 💕",
+        "Bas ab maan jao na Sneha, kitna bhav khaogi? 🙈",
+        "Yay! Thank you so much mujhe maaf karne ke liye... I love you the mostest! 🥰✨"
+    ];
+
+    let currentStep = 0;
+
+    function nextStep() {
+        currentStep++;
+        if (currentStep < steps.length) {
+            document.getElementById("step-title").innerText = `Step ${currentStep + 1}/11 🥺`;
+            document.getElementById("step-text").innerText = steps[currentStep];
+        } else {
+            currentStep = 0;
+            document.getElementById("step-title").innerText = `Step 1/11 🥺`;
+            document.getElementById("step-text").innerText = steps[0];
+        }
+    }
+</script>
+
+</body>
+</html>
